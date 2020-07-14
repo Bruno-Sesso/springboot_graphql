@@ -14,4 +14,8 @@ public class QueryGraphQL implements GraphQLQueryResolver{
 	public int soma(int a, int b){
 		return a+b;
 	}
+
+	public Cliente cliente(){
+		return new Cliente("Bruno", "bruno@gmail.com");
+	}
 }
