@@ -1,7 +1,9 @@
 # SpringBoot with GraphQL
+
 <b><i>Api RestFull purchases using GraphQL with Spring Boot</b></em>
 
-### h3 Exemplos de Query com Alias
+<h4> Exemplos de Query com Alias</h4>
+
 ```
 {
   c1:cliente(id:1){
@@ -17,7 +19,8 @@
 }
 ```
 
-### h3 Exemplos de Query com Fragment
+<h4> Exemplos de Query com Fragment</h4>
+
 ```
 {
   c1:cliente(id:1){
@@ -33,7 +36,8 @@ fragment FragCliente on Cliente {
 }
 ```
 
-### h3 Exemplos de Query Mutation com input type
+<h4> Exemplos de Query Mutation com input type</h4>
+
 ```
 mutation{
   saveCliente(cliente:{
@@ -47,7 +51,9 @@ mutation{
   }
 }
 ```
-### h3 Exemplos de Query com variáveis
+
+<h4> Exemplos de Query com variáveis</h4>
+
 ```
 query GetCliente($id:ID!) {
         cliente(id:$id) {
