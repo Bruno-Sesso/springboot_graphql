@@ -1,6 +1,6 @@
 package com.udemy.compras.service;
 
-import com.udemy.compras.domain.Produto;
+import com.udemy.compras.persistence.Produto;
 import com.udemy.compras.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

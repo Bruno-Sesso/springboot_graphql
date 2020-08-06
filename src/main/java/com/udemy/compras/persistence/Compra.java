@@ -1,4 +1,4 @@
-package com.udemy.compras.domain;
+package com.udemy.compras.persistence;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,11 +21,11 @@ public class Compra {
     private Long quantidade;
     private String status;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "cliente_id", nullable = true)
     private Cliente cliente;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "produto_id", nullable = true)
     private Produto produto;
 }

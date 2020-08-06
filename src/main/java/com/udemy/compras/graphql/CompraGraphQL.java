@@ -2,7 +2,7 @@ package com.udemy.compras.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.udemy.compras.domain.Compra;
+import com.udemy.compras.persistence.Compra;
 import com.udemy.compras.service.ClienteService;
 import com.udemy.compras.service.CompraService;
 import com.udemy.compras.service.ProdutoService;

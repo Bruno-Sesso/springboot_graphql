@@ -1,6 +1,6 @@
 package com.udemy.compras.repository;
 
-import com.udemy.compras.domain.Compra;
+import com.udemy.compras.persistence.Compra;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

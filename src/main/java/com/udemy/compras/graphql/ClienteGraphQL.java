@@ -2,7 +2,7 @@ package com.udemy.compras.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.udemy.compras.domain.Cliente;
+import com.udemy.compras.persistence.Cliente;
 import com.udemy.compras.service.ClienteService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

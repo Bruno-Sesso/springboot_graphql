@@ -1,4 +1,4 @@
-package com.udemy.compras.domain;
+package com.udemy.compras.persistence;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
