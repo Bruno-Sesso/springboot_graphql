@@ -8,6 +8,8 @@ import com.udemy.compras.service.CompraService;
 import com.udemy.compras.service.ProdutoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -29,8 +31,9 @@ public class CompraGraphQL implements GraphQLQueryResolver, GraphQLMutationResol
         return service.findById(id);
     }
 
-    public List<Compra> compras() {
-        return service.findAll();
+    public List<Compra> compras(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return service.findAll(pageable);
     }
 
     public Compra saveCompra(CompraInput input) {

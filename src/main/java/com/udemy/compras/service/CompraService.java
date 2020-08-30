@@ -4,6 +4,8 @@ import com.udemy.compras.persistence.Cliente;
 import com.udemy.compras.persistence.Compra;
 import com.udemy.compras.repository.CompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -19,8 +21,8 @@ public class CompraService {
         return rep.findById(id).orElse(null);
     }
 
-    public List<Compra> findAll(){
-        return rep.findAll();
+    public List<Compra> findAll(Pageable pageable){
+        return rep.findAll(pageable).getContent();
     }
 
     @Transactional

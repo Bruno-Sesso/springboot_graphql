@@ -2,7 +2,7 @@
 
 <b><i>Api RestFull purchases using GraphQL with Spring Boot</b></em>
 
-<h4> Exemplos de Query com Alias</h4>
+<h4> Exemplo de Query com Alias</h4>
 
 ```
 {
@@ -19,7 +19,7 @@
 }
 ```
 
-<h4> Exemplos de Query com Fragment</h4>
+<h4> Exemplo de Query com Fragment</h4>
 
 ```
 {
@@ -36,7 +36,7 @@ fragment FragCliente on Cliente {
 }
 ```
 
-<h4> Exemplos de Query Mutation com input type</h4>
+<h4> Exemplo de Query Mutation com input type</h4>
 
 ```
 mutation{
@@ -52,7 +52,7 @@ mutation{
 }
 ```
 
-<h4> Exemplos de Query com variáveis</h4>
+<h4> Exemplo de Query com variáveis</h4>
 
 ```
 query GetCliente($id:ID!) {
@@ -69,3 +69,21 @@ query GetCliente($id:ID!) {
 >   "id":2
 >}
 >```
+
+<h4> Exemplo de Query com paginação</h4>
+ 
+ ```
+{
+  compras(page:1, size:5){
+    id
+    quantidade
+    status
+    cliente{
+      id, nome
+    }
+    produto{
+      id, nome, valorReais
+    }
+  }
+}
+```
